@@ -1,6 +1,7 @@
 #1 . 
+# # jeu du nombre mystère
 """
-# jeu du nombre mystère
+
 - générer un nombre aléatoire : 
     import random 
 
@@ -11,7 +12,9 @@ si le nombre est plus grand afficher un message spécifique
 si le nombre est plus petit afficher un message spécifique
 si le nombre est correct afficher un message mettre fin au jeu
 """
-#2 . 
+
+#2 . =========================================================
+#FizzBuzz
 """
 fizzbuzz : range() : 
 Afficher « FizzBuzz » si le nombre est un multiple de 3 et de 5 (divisible par 15).
@@ -19,7 +22,9 @@ Afficher « Fizz » si le nombre est un multiple de 3.
 Afficher « Buzz » si le nombre est un multiple de 5
 Afficher le nombre lui-même dans tous les autres cas.
 """
-# 3 . 
+
+# 3 . ========================================================= 
+# Programme interactif
 """gérer un programme qui propose à l'utilisateur les actions disponibles
     # dans une boucle while
     # proposer les choix
@@ -28,10 +33,9 @@ Afficher le nombre lui-même dans tous les autres cas.
     # prévoir l'arrèt du programme
 """
 
-# 4 .
+# 4 . =========================================================
+# Pierre papier ciseaux
 """
-Pierre papier ciseaux
-
 valeur générer aléatoirement pour l'ordinateur
 comparaison du resultat
 le premier à trois point gagne
