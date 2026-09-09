@@ -19,7 +19,7 @@ while not stop_loop:
         # Nombre mystère
         case "1":
             print('mystery')
-            mystery = random.randint(0,101)
+            mystery = random.randint(0,100)
             victory = False
 
             while not victory:
@@ -30,7 +30,7 @@ while not stop_loop:
                 elif choice > mystery:
                     print('le nombre mystère est plus petit')
                 else:
-                    print(f'Bravo vous avez trouver le nombre mystere : {mystery}')
+                    print(f'Bravo vous avez trouvé le nombre mystere : {mystery}')
                     victory = True
         # FizzBuzz
         case "2":
@@ -114,7 +114,7 @@ while not stop_loop:
                 
                 if bot_points == 3 or user_points == 3:
                     if bot_win :
-                        print(f'La machine à gagné , vous aviez {user_points} points')
+                        print(f'La machine a gagné , vous aviez {user_points} points')
                     if user_win :
                         print(f'Vous avez gagné , La machine avait {bot_points} points')
             
@@ -122,4 +122,4 @@ while not stop_loop:
             stop_loop = True
     
     if stop_loop == True:
-        print("Merci à bientot")
+        print("Merci à bientôt")
