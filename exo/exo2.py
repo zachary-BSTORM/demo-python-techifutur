@@ -1,3 +1,4 @@
+
 # Calcul moyenne de température
 """
 Calculez la somme et la moyenne des valeurs d'une liste,
@@ -20,6 +21,9 @@ Fusionner deux stocks Deux entrepôts envoient leur inventaire.
 Construisez un dictionnaire du stock total : 
 les produits communs voient leurs quantités additionnées, 
 les produits présents dans un seul entrepôt sont repris tels quels.
+
+entrepot_a = {"clavier": 12, "souris": 30, "ecran": 5}
+entrepot_b = {"souris": 15, "ecran": 8, "webcam": 7, "casque": 3}
 """
 
 # Programme intercatif
