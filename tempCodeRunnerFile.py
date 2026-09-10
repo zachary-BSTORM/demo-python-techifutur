@@ -1,1 +1,1 @@
-10
+print("La valeur est incorrect")
