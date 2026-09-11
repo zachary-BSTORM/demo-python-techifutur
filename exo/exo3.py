@@ -8,6 +8,7 @@
 
 # Gestion d'utilisateur
 
+# ennoncé
 """
 les utilisateurs sont dans un dict
 
@@ -44,43 +45,99 @@ Quitter               : 5
 """
 
 
-def get_name():
-    pass
+def get_value_str(value,name):
+    name = input(f"Entrez le {name} : ")
+    
+    while len(name) < value:
+        print(f"Le {name} doit faire au moins {value} caractères")
+        name = input(f"Entrez le {name} : ")
+    return name
+    
 
-def get_number():
-    pass
+def get_number(max,min = 0):
+    while True:
+        try:
+            nb = int(input("Entrez la valeur"))
+            
+            if min < nb < max:
+                return nb
 
-def get_role():
-    pass
+        except:
+            print("Veillez entrer une valeur correcte !")
 
-def add_user(users):
-    pass
+def get_role(*args):
+    while True :
+        role = input("Entrez un role : user - admin : ")
+        
+        if role in args:
+            return role
+
+def add_user():
+    """
+    - name : str
+    - age  : int
+    - adresse : str
+    - role : admin | user
+    """
+    name = get_value_str(3,"name")
+    adresse = get_value_str(10,"adresse")
+    age = get_number(min=18,max=120)
+    role = get_role("user","admin")
+    
+    list_user[name] = {"name":name,"age":age,"adresse":adresse,"role":role}
+    print(f"utilisateur {name} ajouté")
 
 def remove_user(users):
-    pass
+    print("=========================")
+    for k in users.keys():
+        print(k)
+    print("=========================")
+    key = get_value_str(2,"nom à supprimer")
+    
+    del users[key]
+    
+def update_user(users):
+    print("=========================")
+    for k in users.keys():
+        print(k)
+    print("=========================")
+    key = input("Quel utilisateur voulez vous modifier ? ")
+    
+    print(list_user[key])
+    name = get_value_str(3,"name")
+    adresse = get_value_str(10,"adresse")
+    age = get_number(min=18,max=120)
+    role = get_role("user","admin")
+    
+    list_user[name] = {"name":name,"age":age,"adresse":adresse,"role":role}
 
-def update_user(users,updated_users):
-    pass
+def show_user(users : dict):
+    print("=============================================")
+    for k,v in users.items():
+        print(f"L'utilisateur : {k} :adresse : {v["adresse"]} - age : {v["age"]} - role : {v["role"]} ")
+    print("=============================================")
+    
 
-def show_user(users):
-    pass
 
-
-stop_app : False
+stop_app = False
 
 while not stop_app:
     print(menu)
+    
     
     choice = input("Entrez votre choix : ")
     
     match choice :
         case "1":
-            pass
+            show_user(list_user)
         case "2":
-            pass
+           add_user()
         case "3":
-            pass
+            update_user(list_user)
         case "4":
-            pass
+            remove_user(list_user)
         case "5":
-            pass
+            stop_app = True
+
+    if stop_app == True:
+        print("Merci à bientot")        
