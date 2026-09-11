@@ -8,15 +8,5 @@
     "nb_place": "5",
     "nb_roues": 4,
     "carburant": "diesel"
-  },
-  {
-    "categorie": "bateau",
-    "id": 2,
-    "couleur": "rouge",
-    "marque": "vw",
-    "puissance": 1000,
-    "nb_place": "8",
-    "motor": true,
-    "type": "plaisance"
   }
 ]
